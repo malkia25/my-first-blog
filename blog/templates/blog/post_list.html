@@ -6,5 +6,12 @@
 		<h1><em>My Posts</em></h1>
 		<p><em><strong>Welcome to the world of Malkia!</strong></em><p>
 		<p>This is the content</p>
+		{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 	</body>
 </html>
